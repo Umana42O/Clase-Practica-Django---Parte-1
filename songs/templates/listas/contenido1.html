@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% if vacio %}
+<h1>No hay canciones</h1>
+{% else %}
+{% for i in names %}
+<a href="{% url 'descripcion' i %}"> {{ i }}</a>
+{% endfor %}
+{% endif %}
+
+{% endblock %}
